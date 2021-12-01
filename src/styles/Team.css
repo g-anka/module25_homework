@@ -1,0 +1,25 @@
+.main__team {
+    text-align: center;
+}
+
+.main__team-wrapper {
+    margin: 55px 10% 120px;
+    display: grid;
+    grid-template-columns: repeat 4, 1fr;
+    grid-template-rows: repeat 2, 1fr;
+    gap: 10px;
+    row-gap: 60px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 800px) {
+    .main__team-wrapper {
+        margin: 30px 0px 60px;
+        grid-template-columns: repeat 2, 1fr;
+        grid-template-rows: repeat 3, 1fr;
+        gap: 0px;
+        row-gap: 30px;
+    }
+}

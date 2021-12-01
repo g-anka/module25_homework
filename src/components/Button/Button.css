@@ -1,0 +1,22 @@
+.reg__main_btn {
+    background: #61A199;
+    border-radius: 6px;
+    color: #FFFFFF;
+    margin: 17px 0px;
+    padding: 16px 40px;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+    .reg__main_btn {
+        padding: 16px 120px;
+    }
+}
+
+.reg__main_btn:disabled {
+    background: #E6E6E6;
+    color: #B4B5BD;
+    cursor: not-allowed;
+}

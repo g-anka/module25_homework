@@ -1,0 +1,93 @@
+@media screen and (max-width: 800px) {
+    .is-desktop {
+        display: none !important; } }
+
+@media screen and (min-width: 801px) {
+    .is-mobile {
+        display: none !important; } }
+
+@import "fonts.css";
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    color: #1B1B1B;
+    font-family: "Roboto Regular";
+    position: relative;
+}
+
+p {
+    margin: 0px;
+    padding: 0px; }
+
+h1 {
+    font-size: 64px;
+    line-height: 120%;
+    font-family: "Roboto Bold";
+    margin: 60px auto 30px; }
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 32px;
+        line-height: 39px;
+        margin: 40px auto 10px; }
+}
+
+h2 {
+    font-size: 48px;
+    font-family: "Roboto Medium";
+    line-height: 120%;
+    padding-top: 80px;
+    margin: 0px; }
+@media screen and (max-width: 800px) {
+    h2 {
+        font-size: 24px;
+        padding-top: 40px; }
+}
+
+h3 {
+    font-size: 36px;
+    line-height: 147.3%;
+    margin: 52px 0px 30px;
+}
+@media screen and (max-width: 800px) {
+    h3 {
+        font-size: 24px;
+        line-height: 120%;
+        margin: 40px 0px 4px;
+    }
+}
+
+h4 {
+    font-size: 20px;
+    font-family: "Roboto Medium";
+    line-height: 147.3%;
+    margin-top: 23px;
+    margin-bottom: 8px; }
+@media screen and (max-width: 800px) {
+    h4 {
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 1px; }
+}
+
+h5 {
+    color: #828282;
+    font-size: 14px;
+    line-height: 147.3%; }
+@media screen and (max-width: 800px) {
+    h5 {
+        font-size: 12px;
+        line-height: 14px;}
+}
+
+h6 {
+    font-size: 24px;
+    line-height: 147.3%;
+}
+@media screen and (max-width: 800px) {
+    h6 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

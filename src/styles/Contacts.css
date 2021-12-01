@@ -1,0 +1,17 @@
+.main__contacts {
+    text-align: center;
+    background: #F7F9FB;
+}
+
+.main__contacts-wrapper {
+    padding: 43px 50px 105px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .main__contacts-wrapper {
+        flex-direction: column;
+        padding: 20px 0px 40px; }
+}

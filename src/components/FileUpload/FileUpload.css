@@ -1,0 +1,51 @@
+.upload-frame {
+    width: 678px;
+    height: 321px;
+    border-radius: 10px;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #BDBDBD;
+    margin: 0px auto 75px;
+}
+
+.file-upload-icon {
+    margin-top: 106px;
+}
+
+.upload-frame h4 {
+    font-family: "Roboto Regular";
+    margin: 21px 0px 5px;
+}
+
+.upload-frame h4 span {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.upload-frame h5 {
+    color: #828282;
+    margin: 0px;
+}
+
+.upload-frame-mobile {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 15px auto 210px;
+    width: 357px;
+}
+
+.upload-frame-mobile div {
+    text-align: left;
+    margin-left: 12px;
+}
+
+.upload-frame-mobile h4 {
+    margin: 0px;
+    color: #61A199;
+    font-family: "Roboto Regular";
+}
+
+.upload-frame-mobile h5 {
+    margin: 5px 0px 0px;
+}

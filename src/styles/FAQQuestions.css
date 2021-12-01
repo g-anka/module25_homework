@@ -1,0 +1,72 @@
+.main__questions {
+    margin: 60px 207px 120px;
+}
+
+@media screen and (max-width: 800px) {
+    .main__questions {
+        margin: 30px 20px 50px;
+    }
+}
+
+.main__questions-btn {
+    background-color: #F7F7F8;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 147.3%;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    padding: 19px 29px 18px 22px;
+    width: 100%;
+    margin: 14px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .main__questions-btn {
+        padding: 14px 22px 14px 20px;
+        margin: 15px 0px;
+        font-size: 14px;
+    }
+}
+
+.main__questions-btn:after {
+    content: url("../img/btn-collapsible.svg");
+    float: right;
+    margin-left: 30px;
+}
+
+.main__questions-btn:hover {
+    background-color: rgba(97, 161, 153, 0.1);
+}
+
+.main__questions-content {
+    padding: 20px 0px 40px;
+    text-align: left;
+    margin: 20px 22px 40px;
+    font-size: 20px;
+    line-height: 147.3%;
+    display: none;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    .main__questions-content {
+        margin: 15px 20px 30px;
+        font-size: 14px;
+    }
+}
+
+.active {
+    color: #61A199;
+    background-color: rgba(97, 161, 153, 0.15);
+    font-family: "Roboto Medium";
+}
+
+.active:after {
+    content: url("../img/btn-collapsible-active.svg");
+}

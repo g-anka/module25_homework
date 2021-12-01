@@ -1,0 +1,23 @@
+.reg_error {
+    background-color: #EB5757;
+    text-align: center;
+    display: none;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+.reg_error p {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0px;
+    padding: 20px 0px
+}
+@media screen and (max-width: 800px) {
+    .reg_error p {
+        font-size: 14px;
+        line-height: 16px;
+        width: 320px;
+    }
+}
