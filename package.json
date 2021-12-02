@@ -37,5 +37,13 @@
     "webpack-dev-server": "^4.4.0",
     "yargs": "^17.1.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-anka/module25_homework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/g-anka/module25_homework/issues"
+  },
+  "homepage": "https://github.com/g-anka/module25_homework#readme"
 }

@@ -1,0 +1,31 @@
+.upload {
+    height: 321px;
+    width: 431px;
+    background-color: #F7F7F8;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 75px;
+}
+@media screen and (max-width: 800px) {
+    .upload {
+        height: 228px;
+        width: 305px;
+        margin-bottom: 45px;
+    }
+}
+
+.selfie-upload-icon {
+    min-height: 48px;
+    min-weight: 48px;
+    position: absolute;
+    margin-top: 136px;
+    margin-left: 191px;
+    cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+    .selfie-upload-icon {
+        margin-top: 89px;
+        margin-left: 128px;
+    }
+}
