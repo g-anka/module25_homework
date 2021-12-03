@@ -1,22 +1,48 @@
 .reg__main_btn {
     background: #61A199;
     border-radius: 6px;
-    color: #FFFFFF;
     margin: 17px 0px;
-    padding: 16px 40px;
-    font-size: 16px;
-    line-height: 19px;
     border: none;
     cursor: pointer;
 }
+
+.btn-text {
+    display: block;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 16px 40px;
+    margin: 0px;
+}
+
 @media screen and (max-width: 800px) {
-    .reg__main_btn {
-        padding: 16px 120px;
+    .btn-text {
+        padding: 16px 116px;
     }
 }
 
 .reg__main_btn:disabled {
     background: #E6E6E6;
-    color: #B4B5BD;
     cursor: not-allowed;
+}
+
+.reg__main_btn:disabled .btn-text {
+    color: #B4B5BD;
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.spinner{
+    width: 24px;
+    animation: spin 1s linear 0s infinite;
+    padding: 14px 76px;
+}
+
+@media screen and (max-width: 800px) {
+    .spinner {
+        padding: 14px 156px;
+    }
 }

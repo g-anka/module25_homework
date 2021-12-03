@@ -5,8 +5,10 @@ import RegistrationPassword from "../RegistrationPassword/RegistrationPassword";
 import useInput from "../../hooks/useInput";
 import Button from "../Button/Button";
 import calendar from "../../img/calendar.svg";
+import spinner from "../../img/loader-spinner.svg"
 import RegistrationError from "../RegistrationError/RegistrationError";
 import axios from "axios";
+
 
 
 function RegistrationForm() {
@@ -38,6 +40,7 @@ function RegistrationForm() {
 
     //Отправка данных на сервер
     const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(false); //Для иконки прогрузки на кнопке
 
     useEffect(() => {
         fetch('/api/register/step1')
@@ -48,6 +51,7 @@ function RegistrationForm() {
 
     function onSubmit(e) {
         e.preventDefault();
+        setLoading(true);
         axios.post('http://localhost:8000/api/register/step1', {
             username: username.value,
             birthDate: birthDate.value,
@@ -262,7 +266,7 @@ function RegistrationForm() {
                     className="reg__main_btn"
                     type="submit"
                     onClick={onSubmit}
-                    btnName="Продолжить"
+                    btnName={ loading? <img className="spinner" src={spinner} alt="загрузка..." /> : <span className="btn-text">Продолжить</span>}
                     disabled={!username.inputValid || !birthDate.inputValid || !email.inputValid || !phone.inputValid || !passport.inputValid || !passportDate.inputValid || !passportWhoGave.inputValid || !passportOfficeNumber.inputValid || !drivingLicence.inputValid || !drivingLicenceDate.inputValid || !password.inputValid || !password2.inputValid || password.value != password2.value} />
             </form>
         </section>
