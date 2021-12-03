@@ -6,12 +6,10 @@ import useInput from "../../hooks/useInput";
 import Button from "../Button/Button";
 import calendar from "../../img/calendar.svg";
 import RegistrationError from "../RegistrationError/RegistrationError";
-//const axios = require('axios');
 import axios from "axios";
 
 
 function RegistrationForm() {
-    const {value} = require ("../../hooks/useInput")
 
     const username = useInput('', {isEmpty: true});
     const birthDate = useInput('', {isEmpty: true});
@@ -26,7 +24,6 @@ function RegistrationForm() {
     const password = useInput('', {isEmpty: true});
     const password2 = useInput('', {isEmpty: true});
 
-    console.log("KEY.VALUE: ", username.value)
 
     // Функции для стилизации валидированных полей
     const colorInputRed = (id) => {
@@ -62,15 +59,17 @@ function RegistrationForm() {
             passportOfficeNumber: passportOfficeNumber.value,
             drivingLicence: drivingLicence.value,
             drivingLicenceDate: drivingLicenceDate.value,
-            password: password.value
-        })
-            .then((res) => console.log("RES: ", res))
+            password: password.value })
+            .then((res) => {
+                console.log("RES: ", res);
+                res.data;
+                })
+            .then(data => setUsers(data))
             .catch((error) => {
                 console.log("Ошибка произошла", error)
                // let errorDiv = document.getElementsByClassName("reg_error")
                 })
     }
-
 
     return (
         <section>

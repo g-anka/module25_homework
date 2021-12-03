@@ -1,37 +1,43 @@
 const {Router} = require('express');
 const router = Router();
-const cors = require('cors');
+const bcrypt = require('bcrypt');
 const User = require('../models/User');
 
 
 // /api/register/step1
 router.get(
-    '/step1', (req, res) => {
-        res.send(`I've received your GET request`)
+    '/step1', async (req, res) => {
+        const data = await User.find();
+        res.send(`Here is your users collection: ${data}`)
     })
 
 router.post(
-    '/step1', (req, res) => {
-        if(!req.body) return res.sendStatus(400);
-        console.log("REQ BODY: ", req.body);
-        res.send(`I've received the following data: ${req.body.username} - ${req.body.email}`)
+    '/step1', async (req, res) => {
+        try {
+            console.log("REQ BODY: ", req.body);
+
+            if(!req.body) return res.sendStatus(400);
+
+            const {username, birthDate, email, phone, passport, passportDate, passportWhoGave, passportOfficeNumber, drivingLicence, drivingLicenceDate, password } = req.body;
+
+            //Проверка оригинальности почты
+            const candidate = await User.findOne({ email });
+            if(candidate) {
+                return res.status(400).json({message: "Пользователь с такой почтой уже зарегистрирован"})
+            }
+
+            //Хэширование пароля
+            const hashedPassword = await bcrypt.hash(password, 12);
+
+            //Запись нового пользователя в БД
+            const newUser = new User({ username, birthDate, email, phone, passport, passportDate, passportWhoGave, passportOfficeNumber, drivingLicence, drivingLicenceDate, password: hashedPassword });
+            await newUser.save();
+            res.send("Your user has been saved!");
+
+        } catch (e) {
+            res.status(500).json({ message: "Что-то пошло не так, попробуйте снова" })
+        }
     }
 )
-/*
-
-app.get('/', (req, res) => {
-    res.send ("I have received your GET request")
-});
-
-app.post('/', (req, res) => {
-    res.send ("I have received your POST request")
-});
-
-app.put('/', (req, res) => {
-    res.send (" I have received your PUT request")
-});
-
-
-app.use(loggerMiddleware);*/
 
 module.exports = router

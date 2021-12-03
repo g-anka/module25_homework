@@ -16,7 +16,6 @@ app.use((req, res, next) => {
     next();
 })
 app.use(loggerMiddleware)
-//app.options('*', cors())
 
 app.use(express.json());
 app.use('/api/register', cors(), require('./routers/register.router'))
