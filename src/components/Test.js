@@ -1,12 +1,23 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
+import "../components/RegistrationError/RegistrationError.css"
 
 function Test() {
-    return (
-        <div>
-            <h1>Test</h1>
-        </div>
-    )
-}
 
+    const [serverError, useServerError] = useState(false)
+
+    function handle() {
+        useServerError(true)
+    }
+
+    return (
+        <>
+            <div className="reg_error" style={{display: serverError ? "flex" : "none" }} >
+                <p>Это тест</p>
+            </div>
+            <button onClick={handle}>Включить див</button>
+        </>
+    );
+
+}
 
 export default Test;

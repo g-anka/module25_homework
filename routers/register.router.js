@@ -23,7 +23,7 @@ router.post(
             //Проверка оригинальности почты
             const candidate = await User.findOne({ email });
             if(candidate) {
-                return res.status(400).json({message: "Пользователь с такой почтой уже зарегистрирован"})
+                return res.status(400).json({message: "Пользователь с такой почтой уже зарегистрирован" })
             }
 
             //Хэширование пароля
@@ -35,7 +35,7 @@ router.post(
             res.send("Your user has been saved!");
 
         } catch (e) {
-            res.status(500).json({ message: "Что-то пошло не так, попробуйте снова" })
+            return res.status(500).json({ message: "Не удалось продолжить регистрацию. Попробуйте ещё раз" })
         }
     }
 )
