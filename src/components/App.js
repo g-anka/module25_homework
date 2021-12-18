@@ -17,7 +17,7 @@ function App() {
             <Switch>
                 <Route path="/about_us" component={AboutUs} />
                 <Route path="/FAQ" component={FAQ} />
-                <Route path="/register/step1" component={<Registration1 />} />
+                <Route path="/register/step1" component={Registration1} />
                 <Route path="/register/step2" component={Registration2} />
                 <Route path="/register/step3" component={Registration3} />
                 <Route path="/register/success" component={RegistrationSuccess} />

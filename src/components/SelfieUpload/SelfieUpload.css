@@ -21,11 +21,25 @@
     position: absolute;
     margin-top: 136px;
     margin-left: 191px;
-    cursor: pointer;
 }
 @media screen and (max-width: 800px) {
     .selfie-upload-icon {
         margin-top: 89px;
         margin-left: 128px;
     }
+}
+
+.selfie-upload-icon label {
+    cursor: pointer;
+}
+.selfie-upload-input {
+    display: none;
+}
+
+.selfie-uploaded img{
+    height: 321px;
+    width: 431px;
+    border-radius: 10px;
+    object-fit: cover;
+
 }

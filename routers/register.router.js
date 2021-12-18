@@ -2,6 +2,8 @@ const {Router} = require('express');
 const router = Router();
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
+const Selfie = require('../models/Selfie');
+const selfieMiddleware = require("../middleware/selfieUpload")
 
 
 // /api/register/step1
@@ -35,6 +37,28 @@ router.post(
             res.send("Your user has been saved!");
 
         } catch (e) {
+            return res.status(500).json({ message: "Не удалось продолжить регистрацию. Попробуйте ещё раз" })
+        }
+    }
+)
+
+// /api/register/step2
+router.post(
+    '/step2', selfieMiddleware.single('selfie'), async (req, res) => {
+        try {
+            console.log("REQ FILE: ", req.file);
+            if(!req.file) return res.sendStatus(400);
+
+            const {path} = req.file;
+            //Запись данных в БД
+            const newSelfie = new Selfie({path});
+            await newSelfie.save();
+
+           // res.send("User's selfie has been saved!");
+            res.json(newSelfie)
+
+        } catch (e) {
+            console.log("MY SERVER ERROR: ", e);
             return res.status(500).json({ message: "Не удалось продолжить регистрацию. Попробуйте ещё раз" })
         }
     }

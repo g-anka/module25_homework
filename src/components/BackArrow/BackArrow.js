@@ -1,11 +1,12 @@
 import React from "react";
-import "./BackArrow.css"
+import "./BackArrow.css";
+import backArrow from "../../img/back_arrow.svg"
 
 function BackArrow() {
 
     return (
         <div className="back-arrow">
-            <img src="./src/img/back_arrow.svg"></img>
+            <img src={backArrow}></img>
             <span>Назад</span>
         </div>
     );

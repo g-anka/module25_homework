@@ -27,7 +27,7 @@ function Registration3() {
 
                 <FileUpload />
 
-                <hr noshade size="1" color="#E5E5E5"/>
+                <hr size="1" color="#E5E5E5"/>
                 <Button
                     className="reg__main_btn"
                     type="submit" btnName="Зарегистрироваться" />

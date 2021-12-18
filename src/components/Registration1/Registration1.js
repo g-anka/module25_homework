@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {useHistory} from "react-router-dom";
 import axios from "axios";
 import Header from "../Header";
 import RegistrationHeading from "../RegistrationHeading/RegistrationHeading";
@@ -44,7 +45,7 @@ function Registration1() {
     const [loading, setLoading] = useState(false); //Для иконки прогрузки на кнопке submit
     const [serverError, setServerError] = useState(false); //Для отображения компонента RegistrationError
     const [errorMessage, setErrorMessage] = useState(""); //Для отображения текста в компоненте RegistrationError
-
+    const history = useHistory(); //Для перехода на другую станицу
 
     /*useEffect(() => {
         fetch('/api/register/step1')
@@ -73,9 +74,9 @@ function Registration1() {
             password: password.value })
             .then((res) => {
                 console.log("RES: ", res);
-                res.data;
+                history.push("/register/step2");
             })
-            .then(data => setUsers(data))
+            //.then(data => setUsers(data))
             .catch((error) => {
                 setLoading(false);
                 setErrorMessage(error.response.data.message)

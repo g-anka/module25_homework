@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const config = require('config');
 const mongoose = require('mongoose');
+const path = require('path');
 const app = express();
 const PORT = config.get('port') || 8000;
 
@@ -9,15 +10,20 @@ function loggerMiddleware (req, res, next) {
     console.log(`[${req.method}] - ${req.url}`);
     next();
 }
+
 app.use(cors());
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
     next();
 })
-app.use(loggerMiddleware)
 
 app.use(express.json());
+
+app.use('/static', express.static(path.join(__dirname, '/uploadedFiles')))
+
+app.use(loggerMiddleware)
+
 app.use('/api/register', cors(), require('./routers/register.router'))
 /*app.get(
     '/api', (req, res) => {
