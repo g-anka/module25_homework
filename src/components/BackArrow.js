@@ -1,6 +1,6 @@
 import React from "react";
-import "./BackArrow.css";
-import backArrow from "../../img/back_arrow.svg"
+import "../styles/BackArrow.css";
+import backArrow from "../img/back_arrow.svg"
 
 function BackArrow() {
 

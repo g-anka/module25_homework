@@ -1,3 +1,38 @@
+.main {
+    text-align: center;
+}
+
+.main__heading {
+    margin: 120px 0px 60px;
+}
+
+@media screen and (max-width: 800px) {
+    .main__heading {
+        margin: 60px 0px 30px;
+    }
+}
+
+.main__heading p {
+    font-size: 24px;
+    line-height: 147.3%;
+}
+
+@media screen and (max-width: 800px) {
+    .main__heading p {
+        font-size: 16px;
+    }
+}
+
+.main__heading img {
+    margin-bottom: 62px;
+}
+
+@media screen and (max-width: 800px) {
+    .main__heading img {
+        margin-bottom: 40px;
+    }
+}
+
 .main__questions {
     margin: 60px 207px 120px;
 }

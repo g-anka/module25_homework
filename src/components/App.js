@@ -3,11 +3,11 @@ import {Route, Switch} from "react-router-dom";
 import "../styles/App.css";
 import AboutUs from "./AboutUs";
 import FAQ from "./FAQ";
-import Registration1 from "./Registration1/Registration1";
-import Registration2 from "./Registration2/Registration2";
-import Registration3 from "./Registration3/Registration3";
-import RegistrationSuccess from "./RegistrationSuccess/RegistrationSuccess";
-import Main from "./Main/Main";
+import Registration1 from "./Registration1";
+import Registration2 from "./Registration2";
+import Registration3 from "./Registration3";
+import RegistrationSuccess from "./RegistrationSuccess";
+import Main from "./Main";
 
 
 function App() {

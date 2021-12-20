@@ -1,3 +1,15 @@
+@font-face {
+    src: url("../fonts/Roboto-Regular.ttf");
+    font-family: "Roboto Regular"; }
+
+@font-face {
+    src: url("../fonts/Roboto-Medium.ttf");
+    font-family: "Roboto Medium"; }
+
+@font-face {
+    src: url("../fonts/Roboto-Bold.ttf");
+    font-family: "Roboto Bold"; }
+
 @media screen and (max-width: 800px) {
     .is-desktop {
         display: none !important; } }
@@ -5,9 +17,6 @@
 @media screen and (min-width: 801px) {
     .is-mobile {
         display: none !important; } }
-
-@import "fonts.css";
-
 
 body {
     padding: 0px;

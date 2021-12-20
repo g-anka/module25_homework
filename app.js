@@ -24,7 +24,7 @@ app.use('/static', express.static(path.join(__dirname, '/uploadedFiles')))
 
 app.use(loggerMiddleware)
 
-app.use('/api/register', cors(), require('./routers/register.router'))
+app.use('/api/register', cors(), require('./backend/routers/register.router'))
 /*app.get(
     '/api', (req, res) => {
         //res.send("Here are your data list ...")
