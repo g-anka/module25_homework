@@ -27,14 +27,6 @@ module.exports = {
                         loader: "file-loader"
                     }
                 ]
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg|ttf)$/i,
-                use: [
-                    {
-                        loader: "url-loader"
-                    }
-                ]
             }
         ]
     },

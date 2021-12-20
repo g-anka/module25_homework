@@ -11,7 +11,7 @@ const userSchema = new Schema({
     passportOfficeNumber: {type: String},
     drivingLicence: {type: String, unique: true},
     drivingLicenceDate: {type: Date},
-    password: {type: String, require: true}
+    password: {type: String, require: true},
 })
 
 module.exports = model("User", userSchema)

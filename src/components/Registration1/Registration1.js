@@ -127,7 +127,7 @@ function Registration1() {
                                 htmlFor="birthDate"
                                 name="birthDate"
                                 id="birthDate"
-                                type="data"
+                                type="date"
                                 formIcon="form-icon"
                                 divIcon="div-icon"
                                 img={calendar}
